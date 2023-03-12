@@ -8,7 +8,7 @@ const TableItem = ({ sensor }) => {
                             {/* head */}
                             <thead>
                                 <tr className="text-center">
-                                    <td className="text-start">No</td>
+                                    <td>No</td>
                                     <th>PH</th>
                                     <th>TDS</th>
                                     <th>suhu</th>
@@ -17,9 +17,9 @@ const TableItem = ({ sensor }) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {sensor.map((s, index) => (
+                                {sensor.map((s, index ) => (
                                     <tr key={s.id} className="text-center">
-                                        <td>{index++}</td>
+                                        <td className="font-bold">{index = index + 1}</td>
                                         <td>{s.value1}</td>
                                         <td>{s.value2}</td>
                                         <td>{s.value3}</td>

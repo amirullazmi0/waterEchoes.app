@@ -1,11 +1,8 @@
-import { io } from "socket.io-client"
+import { io } from "socket.io-client";
 
-const socket = io('https://skripsi-iot-ku.site/webSocket');
+// const socket = io('https://skripsi-iot-ku.site/webSocket');
 
-socket.on('event', (data) => {
-    console.log(data);
-});
-
+// console.log('socket', socket)
 
 const SocketSensor = ({ sensor }) => {
     return (
@@ -33,8 +30,6 @@ const SocketSensor = ({ sensor }) => {
                     <div className="label-sensor">AMONIA</div>
                 </div>
             </div>
-
-            <h1>socmeaefyev </h1>
         </>
     )
 }

@@ -20,9 +20,10 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [AdminController::class, 'index'])->middleware(['auth', 'verified'])->name('home');
 Route::get('/allTable', [AdminController::class, 'allTable'])->middleware(['auth', 'verified'])->name('allTable');
+Route::get('/prediction', [AdminController::class, 'prediction'])->middleware(['auth', 'verified'])->name('prediction');
 
 Route::get('/postSensor', [SensorController::class, 'store']);
-Route::get('/webSocket', [SensorController::class, 'index'])->middleware(['web', \Fruitcake\Cors\HandleCors::class]);
+Route::get('/webSocket', [SensorController::class, 'index'])->middleware(\Fruitcake\Cors\HandleCors::class);
 
 
 Route::get('/dashboard', function () {

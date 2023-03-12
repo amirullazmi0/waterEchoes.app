@@ -1,3 +1,4 @@
+import Graph from '@/Components/Admin/Graph';
 import Jumbotron from '@/Components/Admin/Jumbotron';
 import Navbar from '@/Components/Admin/Navbar';
 import SocketSensor from '@/Components/Admin/SocketSensor';
@@ -12,6 +13,7 @@ export default function Home(props) {
                 <Jumbotron />
                 <div className="lg:p-6 mr-auto">
                     <SocketSensor sensor={props.sensor} />
+                    <Graph />
                 </div>
             </div>
         </>

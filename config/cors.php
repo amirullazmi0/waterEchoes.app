@@ -17,9 +17,9 @@ return [
 
     'paths' => ['api/webSocket', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['GET'],
+    'allowed_methods' => ['GET', 'POST'],
 
-    'allowed_origins' => ['https://skripsi-iot-ku.site/'],
+    'allowed_origins' => ['https://skripsi-iot-ku.site/', 'https://skripsi-iot-ku.site/'],
 
     'allowed_origins_patterns' => [],
 
