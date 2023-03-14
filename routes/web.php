@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\Hello;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -23,8 +24,14 @@ Route::get('/allTable', [AdminController::class, 'allTable'])->middleware(['auth
 Route::get('/prediction', [AdminController::class, 'prediction'])->middleware(['auth', 'verified'])->name('prediction');
 
 Route::get('/postSensor', [SensorController::class, 'store']);
-Route::get('/webSocket', [SensorController::class, 'index'])->middleware(\Fruitcake\Cors\HandleCors::class);
+// Route::get('/broadcast', function () {
+//     broadcast(new Hello('websocket done'));
+// });
 
+Route::get('bro', function () {
+    // broadcast(new \App\Events\Hello('my-event'));
+    // return 'Test';
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

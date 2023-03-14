@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f472e430e068d7ba5e4d093638d156b9",
+    "content-hash": "16983ac35c63cb028a2e8860c81fa552",
     "packages": [
+        {
+            "name": "ably/ably-php",
+            "version": "1.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ably/ably-php.git",
+                "reference": "12345c7e6790e7dc0169e7505b0bea1a2e4b1241"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ably/ably-php/zipball/12345c7e6790e7dc0169e7505b0bea1a2e4b1241",
+                "reference": "12345c7e6790e7dc0169e7505b0bea1a2e4b1241",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "php": "^7.2 || ^8.0",
+                "rybakit/msgpack": ">=0.9.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ably\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Ably",
+                    "email": "support@ably.com"
+                }
+            ],
+            "description": "Ably REST client library for PHP.",
+            "homepage": "https://www.ably.com/",
+            "keywords": [
+                "ably",
+                "messages",
+                "messaging"
+            ],
+            "support": {
+                "issues": "https://github.com/ably/ably-php/issues",
+                "source": "https://github.com/ably/ably-php/tree/1.1.9"
+            },
+            "time": "2022-09-15T12:31:16+00:00"
+        },
         {
             "name": "beyondcode/laravel-websockets",
             "version": "1.14.0",
@@ -777,86 +830,6 @@
                 "source": "https://github.com/php-fig/http-message-util/tree/1.1.5"
             },
             "time": "2020-11-24T22:02:12+00:00"
-        },
-        {
-            "name": "fruitcake/laravel-cors",
-            "version": "v3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fruitcake/laravel-cors.git",
-                "reference": "7c036ec08972d8d5d9db637e772af6887828faf5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fruitcake/laravel-cors/zipball/7c036ec08972d8d5d9db637e772af6887828faf5",
-                "reference": "7c036ec08972d8d5d9db637e772af6887828faf5",
-                "shasum": ""
-            },
-            "require": {
-                "fruitcake/php-cors": "^1.2",
-                "illuminate/contracts": "^6|^7|^8|^9",
-                "illuminate/support": "^6|^7|^8|^9",
-                "php": "^7.4|^8.0"
-            },
-            "require-dev": {
-                "laravel/framework": "^6|^7.24|^8",
-                "orchestra/testbench-dusk": "^4|^5|^6|^7",
-                "phpunit/phpunit": "^9",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Fruitcake\\Cors\\CorsServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Fruitcake\\Cors\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fruitcake",
-                    "homepage": "https://fruitcake.nl"
-                },
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
-            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
-            "keywords": [
-                "api",
-                "cors",
-                "crossdomain",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/fruitcake/laravel-cors/issues",
-                "source": "https://github.com/fruitcake/laravel-cors/tree/v3.0.0"
-            },
-            "funding": [
-                {
-                    "url": "https://fruitcake.nl",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/barryvdh",
-                    "type": "github"
-                }
-            ],
-            "abandoned": true,
-            "time": "2022-02-23T14:53:22+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -4488,6 +4461,68 @@
                 "source": "https://github.com/ringcentral/psr7/tree/master"
             },
             "time": "2018-05-29T20:21:04+00:00"
+        },
+        {
+            "name": "rybakit/msgpack",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rybakit/msgpack.php.git",
+                "reference": "fc6bc45e92274e78c32d0a86f2e2cc1f8b5e017b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rybakit/msgpack.php/zipball/fc6bc45e92274e78c32d0a86f2e2cc1f8b5e017b",
+                "reference": "fc6bc45e92274e78c32d0a86f2e2cc1f8b5e017b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.1|^8"
+            },
+            "require-dev": {
+                "ext-gmp": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpunit/phpunit": "^7.1|^8|^9",
+                "vimeo/psalm": "^3.9|^4"
+            },
+            "suggest": {
+                "ext-decimal": "For converting overflowed integers to Decimal objects",
+                "ext-gmp": "For converting overflowed integers to GMP objects"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MessagePack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "A pure PHP implementation of the MessagePack serialization format.",
+            "keywords": [
+                "messagepack",
+                "msgpack",
+                "pure",
+                "streaming"
+            ],
+            "support": {
+                "issues": "https://github.com/rybakit/msgpack.php/issues",
+                "source": "https://github.com/rybakit/msgpack.php/tree/v0.9.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/rybakit",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-16T00:48:07+00:00"
         },
         {
             "name": "symfony/console",

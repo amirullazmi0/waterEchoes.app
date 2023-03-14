@@ -15,11 +15,11 @@ return [
     |
     */
 
-    'paths' => ['api/webSocket', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['GET', 'POST'],
+    'allowed_methods' => [],
 
-    'allowed_origins' => ['https://skripsi-iot-ku.site/', 'https://skripsi-iot-ku.site/'],
+    'allowed_origins' => ['*',],
 
     'allowed_origins_patterns' => [],
 

@@ -1,10 +1,4 @@
-import { io } from "socket.io-client";
-
-// const socket = io('https://skripsi-iot-ku.site/webSocket');
-
-// console.log('socket', socket)
-
-const SocketSensor = ({ sensor }) => {
+function SocketSensor({ sensor }) {
     return (
         <>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center all-sensor">
@@ -31,7 +25,7 @@ const SocketSensor = ({ sensor }) => {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default SocketSensor

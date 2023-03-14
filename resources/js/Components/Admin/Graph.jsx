@@ -1,5 +1,4 @@
 
-import { io } from "socket.io-client";
 // const socket = io('https://skripsi-iot-ku.site/webSocket');
 
 // console.log('socket', socket)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\SensorEvent;
 use App\Models\Sensor;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -18,6 +19,8 @@ class AdminController extends Controller
             "sensor" => Sensor::latest('id')->first(),
         ];
 
+        SensorEvent::dispatch($data);
+
         return Inertia::render('Admin/Home', $data);
     }
 
@@ -28,7 +31,6 @@ class AdminController extends Controller
             "active" => "allTable",
             "sensor" => Sensor::orderBy('id', 'desc')->get(),
         ];
-
         return Inertia::render('Admin/AllTable', $data);
     }
 
