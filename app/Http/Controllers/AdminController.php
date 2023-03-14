@@ -31,6 +31,7 @@ class AdminController extends Controller
             "active" => "allTable",
             "sensor" => Sensor::orderBy('id', 'desc')->get(),
         ];
+        
         return Inertia::render('Admin/AllTable', $data);
     }
 

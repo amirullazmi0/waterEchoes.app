@@ -22,6 +22,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@progress/kendo-drawing": "^1.17.4",
+        "@progress/kendo-react-gauges": "^5.11.0",
         "daisyui": "^2.51.3",
         "socket.io-client": "^4.6.1"
     }

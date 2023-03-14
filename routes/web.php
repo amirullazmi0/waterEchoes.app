@@ -1,7 +1,8 @@
 <?php
 
-use App\Events\Hello;
 use Inertia\Inertia;
+use App\Events\Hello;
+use App\Events\SensorEvent;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\AdminController;
@@ -24,13 +25,14 @@ Route::get('/allTable', [AdminController::class, 'allTable'])->middleware(['auth
 Route::get('/prediction', [AdminController::class, 'prediction'])->middleware(['auth', 'verified'])->name('prediction');
 
 Route::get('/postSensor', [SensorController::class, 'store']);
-// Route::get('/broadcast', function () {
-//     broadcast(new Hello('websocket done'));
-// });
 
-Route::get('bro', function () {
-    // broadcast(new \App\Events\Hello('my-event'));
-    // return 'Test';
+
+Route::get('/bro', function () {
+    $data = [
+        'nama' => 'amirull azmi',
+        'nim' => 'D1041181009'
+    ];
+    SensorEvent::dispatch($data);
 });
 
 Route::get('/dashboard', function () {

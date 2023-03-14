@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sensor;
+use Inertia\Controller;
+use App\Events\SensorEvent;
 use Illuminate\Http\Request;
 
 class SensorController extends Controller
@@ -49,6 +51,7 @@ class SensorController extends Controller
             'value5' => $request->value5
         ];
 
+        SensorEvent::dispatch($data);
         Sensor::create($data);
         // simpan data ke database jika diperlukan
         return response()->json(['message' => 'Data berhasil diterima']);
