@@ -1,23 +1,40 @@
-const Graph = () => {
+import { useState } from "react"
+import ChartItem from "./ChartItem"
+
+const Graph = ({ weekly, monthly, daily }) => {
+    const [iniDaily, setDaily] = useState(daily)
+    const [iniWeekly, setWeekly] = useState(weekly)
+    const [iniMonthly, setMonthly] = useState(monthly)
+
+    const hourlyLabels = [
+        '1', '2', '3', '4', '5', '6',
+        '7', '8', '9', '10', '11', '12',
+        '13', '14', '15', '16', '17', '18',
+        '19', '20', '21', '22', '23', '24'
+    ]
+    const dailyLabels = [
+        'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'
+    ]
+    const weeklyLabels = [
+        'Minggu 1', 'Minggu 2', 'Minggu 3', 'Minggu 4'
+    ]
+    const monthlyLabels = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des'
+    ]
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 justify-center all-sensor">
-                <div className="flex justify-center card bg-base-100 border shadow-sm p-2 m-2">
-                    <img src="https://lh3.googleusercontent.com/YLUe4juF8FfLjcH5qaY5j4INs0PxZDeJVThQBm6GIbiTMFzkG7k3ax7LrOarIzJONQgv=w606-rwa" alt="" />
-                    <div className="label-sensor">Graph Day</div>
-                </div>
-                <div className="flex justify-center card bg-base-100 border shadow-sm p-2 m-2">
-                    <img src="https://lh3.googleusercontent.com/YLUe4juF8FfLjcH5qaY5j4INs0PxZDeJVThQBm6GIbiTMFzkG7k3ax7LrOarIzJONQgv=w606-rwa" alt="" />
-                    <div className="label-sensor">Graph Day</div>
-                </div>
-                <div className="flex justify-center card bg-base-100 border shadow-sm p-2 m-2">
-                    <img src="https://lh3.googleusercontent.com/YLUe4juF8FfLjcH5qaY5j4INs0PxZDeJVThQBm6GIbiTMFzkG7k3ax7LrOarIzJONQgv=w606-rwa" alt="" />
-                    <div className="label-sensor">Graph Week</div>
-                </div>
-                <div className="flex justify-center card bg-base-100 border shadow-sm p-2 m-2">
-                    <img src="https://lh3.googleusercontent.com/YLUe4juF8FfLjcH5qaY5j4INs0PxZDeJVThQBm6GIbiTMFzkG7k3ax7LrOarIzJONQgv=w606-rwa" alt="" />
-                    <div className="label-sensor">Graph Month</div>
-                </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 justify-center all-sensor overflow-x-auto">
+                {/* <ChartItem title={"Daily Chart"} label={dailyLabels} /> */}
+                <ChartItem
+                    title={"Weekly Chart"}
+                    label={weeklyLabels}
+                    dataGrafik={iniWeekly}
+                />
+                <ChartItem
+                    title={"Monthly Chart"}
+                    label={monthlyLabels}
+                    dataGrafik={iniMonthly}
+                />
             </div>
         </>
     )

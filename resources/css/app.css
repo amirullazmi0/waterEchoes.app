@@ -7,14 +7,15 @@
     min-height: 100vh;
 }
 .sisi-form{
-    background-color: rgb(80, 98, 255);
+    background-color: rgb(75, 153, 255);
 }
 .sisi-form .card-form{
     border-bottom-right-radius: 70px;
     border-top-right-radius: 5px;   
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: 2px 2px 15px rgb(48, 57, 138);
+    /* box-shadow: 2px 2px 15px rgb(48, 57, 138); */
+    box-shadow: 2px 2px 15px rgb(75, 153, 255);
 }
 
 .sisi-img{
@@ -55,12 +56,16 @@
 
 .tron{
     height: 250px;
-    background-color: rgb(80, 98, 255);
+    /* background-color: rgb(80, 98, 255); */
+    background-color: rgb(75, 153, 255);
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     margin-bottom: -120px;
 }
 
+.color{
+    color: rgb(255, 232, 21);
+}
 .tron-title{
     font-size: 30px;
     font-weight: bold;
@@ -101,7 +106,8 @@
 }
 
 .navbar{
-    background: rgb(80, 98, 255);
+    /* background: rgb(80, 98, 255); */
+    background: rgba(75, 153, 255, 0.309);
     position: fixed;
     z-index: 1;
 }
@@ -111,6 +117,16 @@
     font-weight: bold;
     color: white;
     font-size: 25px;
+}
+
+.nav-img{
+    /* -webkit-filter: drop-shadow(1px 1px 1px rgb(75, 153, 255)); */
+    /* filter: drop-shadow(5px 5px 5px rgb(75, 153, 255)); */
+}
+
+.nav-side-icon{
+    /* -webkit-filter: drop-shadow(1px 1px 1px rgb(75, 153, 255)); */
+    /* filter: drop-shadow(5px 5px 5px rgb(75, 153, 255)); */
 }
 
 #sidebar-on{
@@ -146,7 +162,8 @@
 }
 
 .sidebar-brand .sidebar-button{
-    color: rgb(80, 98, 255);
+    /* color: rgb(80, 98, 255); */
+    color: rgb(75, 153, 255);
     font-weight: bold;
 }
 
@@ -161,7 +178,8 @@
 }
 
 .sidebar-item:hover{
-    background-color: rgb(80, 98, 255);
+    /* background-color: rgb(80, 98, 255); */
+    background-color: rgb(75, 153, 255);
     color: rgb(255, 255, 255);
     border-top-right-radius: 30px;
     border-top-left-radius: 0px;
@@ -171,7 +189,8 @@
 }
 
 .sidebar-list .active{
-    background-color: rgb(80, 98, 255);
+    /* background-color: rgb(80, 98, 255); */
+    background-color: rgb(75, 153, 255);
     color: rgb(255, 255, 255);
     border-top-right-radius: 30px;
     border-top-left-radius: 0px;
@@ -182,7 +201,8 @@
 }
 
 .sidebar-list .active-mid{
-    background-color: rgb(80, 98, 255);
+    /* background-color: rgb(80, 98, 255); */
+    background-color: rgb(75, 153, 255);
     color: rgb(255, 255, 255);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;

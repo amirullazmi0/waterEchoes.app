@@ -52,9 +52,14 @@ class SensorController extends Controller
         ];
 
         SensorEvent::dispatch($data);
-        Sensor::create($data);
+        $all = SensorEvent::dispatch($data);
+        // event(new SensorEvent($data));
+
+        if ($request->upload == true) {
+            Sensor::create($data);
+        }
         // simpan data ke database jika diperlukan
-        return response()->json(['message' => 'Data berhasil diterima']);
+        return response()->json(['message' => 'Data berhasil diterima', $all]);
     }
 
     /**

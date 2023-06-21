@@ -13,11 +13,12 @@ const TableItem = ({ sensor }) => {
                                     <th>TDS</th>
                                     <th>suhu</th>
                                     <th>salinitas</th>
-                                    <th>amonia</th>
+                                    <th>Amonia</th>
+                                    <th>Tanggal</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {sensor.map((s, index ) => (
+                                {sensor.map((s, index) => (
                                     <tr key={s.id} className="text-center">
                                         <td className="font-bold">{index = index + 1}</td>
                                         <td>{s.value1}</td>
@@ -25,6 +26,7 @@ const TableItem = ({ sensor }) => {
                                         <td>{s.value3}</td>
                                         <td>{s.value4}</td>
                                         <td>{s.value5}</td>
+                                        <td>{s.created_at}</td>
                                     </tr>
                                 ))}
                             </tbody>

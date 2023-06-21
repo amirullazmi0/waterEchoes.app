@@ -25,6 +25,7 @@ Route::get('/allTable', [AdminController::class, 'allTable'])->middleware(['auth
 Route::get('/prediction', [AdminController::class, 'prediction'])->middleware(['auth', 'verified'])->name('prediction');
 
 Route::get('/postSensor', [SensorController::class, 'store']);
+Route::get('/data', [SensorController::class, 'index']);
 
 
 Route::get('/bro', function () {

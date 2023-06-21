@@ -90,17 +90,18 @@ const Navbar = ({ active }) => {
     return (
         <>
             {/* style={{ display: sidebar ? 'block' : 'none'}} */}
+            {/* id={sidebar ? 'sidebar-on' : 'sidebar-off'} */}
             <div id={sidebar ? 'sidebar-on' : 'sidebar-off'} ref={myRef} >{iniSidebar()}</div>
             <div className="navbar bg-ku lg:pr-6 lg:pl-6 ">
                 <div className="flex-1 nav-header">
                     <div className="flex mr-2 items-center">
                         <button onClick={() => openSidebar()}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6 nav-side-icon">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         </button>
                     </div>
-                    <img className="h-16" src="/img/WEon-white.png" alt="" />
+                    <img className="h-16 nav-img" src="/img/WEon-white.png" alt="" />
                 </div>
                 <div className="flex-none">
                     <div className="dropdown dropdown-end">

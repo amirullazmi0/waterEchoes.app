@@ -10,7 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class SensorEvent implements ShouldBroadcast
+class SensorEventValue2 implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -34,8 +34,6 @@ class SensorEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('Sensor-Event');
+        return new Channel('Sensor-Event-Value2');
     }
 }
-
-

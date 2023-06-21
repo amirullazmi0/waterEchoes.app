@@ -9,8 +9,7 @@ import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
 
 window.Pusher = Pusher;
-
-
+    
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: '43b990a5bc74c642315a',
@@ -18,10 +17,6 @@ window.Echo = new Echo({
     forceTLS: true
 });
 
-// window.Echo.channel('Sensor-Event').listen("SensorEvent", (event) => {
-//     console.log('Sensor Realtime')
-//     console.log('event : ', event);
-// });
 
 export default function Home(props) {
     const [iniSocket, setSocket] = useState('')
@@ -32,7 +27,6 @@ export default function Home(props) {
         setSocket(event.message);
     });
 
-    console.log('state : ', iniSocket);
     return (
         <>
             <div className='bg-body'>
@@ -40,8 +34,8 @@ export default function Home(props) {
                 <Navbar active={props.active} />
                 <Jumbotron />
                 <div className="lg:p-6 mr-auto">
-                    <SocketSensor sensor={iniSocket} />
-                    <Graph />
+                    <SocketSensor sensor={iniSocket} latest={props.sensor} />
+                    <Graph weekly={props.weekly} monthly={props.monthly} />
                 </div>
             </div>
         </>

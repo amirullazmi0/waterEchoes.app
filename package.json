@@ -22,9 +22,11 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@faker-js/faker": "^7.6.0",
         "@progress/kendo-drawing": "^1.17.4",
         "@progress/kendo-react-gauges": "^5.11.0",
+        "chart.js": "^4.2.1",
         "daisyui": "^2.51.3",
-        "socket.io-client": "^4.6.1"
+        "react-chartjs-2": "^5.2.0"
     }
 }
